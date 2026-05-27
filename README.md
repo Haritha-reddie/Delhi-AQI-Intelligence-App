@@ -191,7 +191,8 @@ Claude then answers with this real data as grounding — not hallucinated values
 ## 📸 Screenshots
 
 ### Dashboard — Trend & Charts
-![Dashboard](screenshots/dashboard.png)
+<img width="680" height="450" alt="newplot (1)" src="https://github.com/user-attachments/assets/a6e9c9c7-4608-4bc5-9b8b-84d97558b8f4" />
+
 
 ### Heatmap — Monthly AQI by Station
 ![Heatmap](screenshots/heatmap.png)
