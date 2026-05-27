@@ -32,7 +32,7 @@ Delhi consistently ranks among the world's most polluted cities. Raw air quality
 
 | Property | Detail |
 |---|---|
-| **Source** | [Kaggle — Delhi Air Quality Time Series 2025–2026](https://www.kaggle.com/datasets/jaspreetsingh9652/delhi-air-quality-time-series-data-2025-to-2026-05) |
+| **Source** | [Kaggle - Delhi Air Quality Time Series 2025–2026](https://www.kaggle.com/datasets/jaspreetsingh9652/delhi-air-quality-time-series-data-2025-to-2026-05) |
 | **Date Range** | February 2025 – May 2026 |
 | **Format** | Long format CSV (one row per parameter reading) |
 | **Stations** | Anand Vihar, Punjabi Bagh, Pusa, R K Puram |
@@ -82,25 +82,25 @@ delhi-aqi-app/
 
 ## ✨ Features
 
-### 📊 Tab 1 — Interactive Dashboard
-- **AQI Trend Chart** — Time-series line chart across all selected stations
-- **AQI Category Donut Chart** — Distribution across Good / Satisfactory / Moderate / Poor / Very Poor / Severe
-- **Station Box Plot** — Spread and outliers of AQI per monitoring station
-- **Pollutant Correlation Heatmap** — Pearson correlation matrix across all pollutants (PM2.5, NO2, CO, O3, etc.)
+### 📊 Tab 1 - Interactive Dashboard
+- **AQI Trend Chart** - Time-series line chart across all selected stations
+- **AQI Category Donut Chart** - Distribution across Good / Satisfactory / Moderate / Poor / Very Poor / Severe
+- **Station Box Plot** - Spread and outliers of AQI per monitoring station
+- **Pollutant Correlation Heatmap** - Pearson correlation matrix across all pollutants (PM2.5, NO2, CO, O3, etc.)
 
-### 🗺️ Tab 2 — Location Heatmap
-- Monthly AQI averages by station — instantly reveals seasonal pollution patterns
+### 🗺️ Tab 2 - Location Heatmap
+- Monthly AQI averages by station - instantly reveals seasonal pollution patterns
 - Winter months (Nov–Jan) visually spike red, summer months show lower pollution
 - White cells = missing data for that station/month
 
-### 🔮 Tab 3 — ML Forecasting
+### 🔮 Tab 3 - ML Forecasting
 - Powered by **Facebook Prophet** with yearly + weekly seasonality
 - Forecasts AQI 7–60 days into the future
 - Shows **confidence intervals** (shaded band)
 - Falls back to rolling average if Prophet is unavailable
 - Verdict card shows predicted AQI category with color coding
 
-### 🤖 Tab 4 — AI Chat Analyst
+### 🤖 Tab 4 - AI Chat Analyst
 - Powered by **Anthropic Claude** (`claude-sonnet-4-6`)
 - Context-aware: Claude receives real stats from your filtered dataset
 - ChatGPT-style interface: history on top, input at bottom
@@ -116,11 +116,11 @@ delhi-aqi-app/
 
 The CSV arrives in **long format** (one row per pollutant reading). The pipeline:
 
-1. **Normalizes column names** — strips whitespace, lowercases
-2. **Parses datetime** — auto-detects date/time columns
-3. **Pivots to wide format** — `pivot_table(index=['datetime','location'], columns='Parameters', values='Values')`
-4. **Auto-detects AQI column** — checks for `aqi`, falls back to `pm25`
-5. **Cleans outliers** — drops rows where all numeric values are NaN
+1. **Normalizes column names** - strips whitespace, lowercases
+2. **Parses datetime** - auto-detects date/time columns
+3. **Pivots to wide format** - `pivot_table(index=['datetime','location'], columns='Parameters', values='Values')`
+4. **Auto-detects AQI column** - checks for `aqi`, falls back to `pm25`
+5. **Cleans outliers** - drops rows where all numeric values are NaN
 
 ```python
 pivot = df.pivot_table(
@@ -167,7 +167,7 @@ Stats:
 """
 ```
 
-Claude then answers with this real data as grounding — not hallucinated values.
+Claude then answers with this real data as grounding - not hallucinated values.
 
 **System prompt instructs Claude to:**
 - Always explain AQI numbers in plain English
@@ -190,24 +190,32 @@ Claude then answers with this real data as grounding — not hallucinated values
 
 ## 📸 Screenshots
 
-### Dashboard — Trend & Charts
-<img width="680" height="450" alt="newplot (1)" src="https://github.com/user-attachments/assets/a6e9c9c7-4608-4bc5-9b8b-84d97558b8f4" />
+### Dashboard - Trend & Charts
+<img width="1421" height="804" alt="Screenshot 2026-05-26 at 11 25 32 PM" src="https://github.com/user-attachments/assets/bc1a9149-74ca-40da-ae5c-599aa19cc82c" />
+<img width="1421" height="804" alt="Screenshot 2026-05-26 at 11 25 42 PM" src="https://github.com/user-attachments/assets/3a2ee467-9c27-4e4c-9122-e743a8845863" />
 
 
-### Heatmap — Monthly AQI by Station
-![Heatmap](screenshots/heatmap.png)
 
-### Forecast — Prophet ML Prediction
-![Forecast](screenshots/forecast.png)
 
-### AI Chat — Claude Analyst
-![AI Chat](screenshots/ai_chat.png)
+### Heatmap - Monthly AQI by Station
+<img width="1421" height="804" alt="Screenshot 2026-05-26 at 11 03 29 PM" src="https://github.com/user-attachments/assets/e7d49115-d48e-420f-bd89-256c8042949f" />
+
+
+### Forecast - Prophet ML Prediction
+<img width="1421" height="804" alt="Screenshot 2026-05-26 at 11 03 52 PM" src="https://github.com/user-attachments/assets/2d5764ae-eb03-41d6-b4fd-c6d4d1d9841f" />
+
+
+### AI Chat - Claude Analyst
+<img width="1421" height="804" alt="Screenshot 2026-05-26 at 11 05 37 PM" src="https://github.com/user-attachments/assets/fc363028-ed18-4e3a-b3a4-ec4f3dccc157" />
+<img width="1421" height="804" alt="Screenshot 2026-05-26 at 11 05 55 PM" src="https://github.com/user-attachments/assets/9bcf5343-ce93-4a02-ba5a-32ee37b26f36" />
+
+
 
 ---
 
 ## 🚀 How to Run
 
-### Option A — Google Colab (Recommended, No Setup)
+### Option A - Google Colab (Recommended, No Setup)
 
 1. Open [Google Colab](https://colab.research.google.com)
 2. Upload `Delhi_AQI_App.ipynb`
@@ -216,7 +224,7 @@ Claude then answers with this real data as grounding — not hallucinated values
 5. Add your Anthropic API key in Cell 4
 6. Click the Cloudflare tunnel URL printed by Cell 9
 
-### Option B — Local (Cursor / VS Code)
+### Option B - Local (Cursor / VS Code)
 
 ```bash
 # 1. Clone the repo
@@ -239,7 +247,7 @@ streamlit run frontend/app.py
 
 Open **http://localhost:8501**
 
-### Option C — Docker
+### Option C - Docker
 
 ```bash
 docker build -t delhi-aqi-app .
@@ -284,12 +292,12 @@ Get a free Anthropic API key at: https://console.anthropic.com
 
 Based on analysis of the 2025–2026 dataset:
 
-- **Anand Vihar** consistently shows the highest AQI — driven by heavy traffic from the Inter-State Bus Terminal
-- **Winter months (Nov–Jan)** show the worst air quality — AQI spikes to 300–970 (Severe)
-- **Summer months (Apr–Jun)** show relatively better air quality — AQI typically 50–150
-- **PM2.5 and PM10 are strongly correlated (r=0.83)** — both driven by vehicle emissions and construction dust
-- **Temperature negatively correlates with AQI (r=-0.56)** — higher temperatures disperse pollutants
-- **O3 (ozone) negatively correlates with NO (r=-0.42)** — classic photochemical relationship
+- **Anand Vihar** consistently shows the highest AQI - driven by heavy traffic from the Inter-State Bus Terminal
+- **Winter months (Nov–Jan)** show the worst air quality - AQI spikes to 300–970 (Severe)
+- **Summer months (Apr–Jun)** show relatively better air quality - AQI typically 50–150
+- **PM2.5 and PM10 are strongly correlated (r=0.83)** - both driven by vehicle emissions and construction dust
+- **Temperature negatively correlates with AQI (r=-0.56)** - higher temperatures disperse pollutants
+- **O3 (ozone) negatively correlates with NO (r=-0.42)** - classic photochemical relationship
 
 ---
 
@@ -297,7 +305,7 @@ Based on analysis of the 2025–2026 dataset:
 
 - [ ] Add real-time data ingestion via CPCB API
 - [ ] Health risk calculator (age + AQI → personal risk score)
-- [ ] Alert system — email/SMS when AQI exceeds threshold
+- [ ] Alert system - email/SMS when AQI exceeds threshold
 - [ ] Multi-city comparison (Mumbai, Bangalore, Chennai)
 - [ ] Map visualization with station GPS coordinates
 - [ ] Export reports as PDF
@@ -315,7 +323,7 @@ Based on analysis of the 2025–2026 dataset:
 
 ## 📄 License
 
-MIT License — free to use, modify, and distribute with attribution.
+MIT License - free to use, modify, and distribute with attribution.
 
 ---
 
