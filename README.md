@@ -1,6 +1,6 @@
 # 🌫️ Delhi AQI Intelligence App
 
-> An end-to-end AI-powered air quality analytics platform built with Python, Streamlit, Prophet, and Claude AI — featuring real-time dashboards, ML forecasting, and natural language data querying.
+> An end-to-end AI-powered air quality analytics platform built with Python, Streamlit, Prophet, and Claude AI, featuring real-time dashboards, ML forecasting, and natural language data querying.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.35-red?logo=streamlit&logoColor=white)
@@ -12,7 +12,7 @@
 
 ## 📌 Project Overview
 
-This project transforms raw Delhi air quality sensor data (2025–2026) into a fully interactive intelligence platform. It goes beyond basic charts — users can explore pollution trends, forecast future AQI levels using machine learning, and ask natural language questions to an AI analyst powered by Claude.
+This project transforms raw Delhi air quality sensor data (2025–2026) into a fully interactive intelligence platform. It goes beyond basic charts, users can explore pollution trends, forecast future AQI levels using machine learning, and ask natural language questions to an AI analyst powered by Claude.
 
 **Built as a portfolio project demonstrating Full-Stack AI Engineering skills across the entire data-to-insight pipeline.**
 
@@ -71,7 +71,7 @@ delhi-aqi-app/
 │   └── agent.py             ← Claude AI chat analyst
 │
 ├── data/
-│   └── delhi_aqi.csv        ← Your Kaggle CSV goes here
+│   └── delhi_aqi.csv        ←  Kaggle CSV goes here
 │
 ├── requirements.txt
 ├── Dockerfile
