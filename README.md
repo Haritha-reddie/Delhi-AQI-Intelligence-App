@@ -228,7 +228,7 @@ Claude then answers with this real data as grounding - not hallucinated values.
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/yourusername/delhi-aqi-app
+git clone https://github.com/Haritha-reddie/delhi-aqi-app
 cd delhi-aqi-app
 
 # 2. Install dependencies
